@@ -1,0 +1,10 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.block {
+  padding-block: fluid(30, 10);
+  padding-inline: fluid(400, 20);
+}
