@@ -1,12 +1,36 @@
 @use 'constants' as *;
 @use 'sass:math';
 
+@function to-px-number($value, $name: 'value') {
+  @if math.is-unitless($value) {
+    @return $value;
+  }
+
+  @if math.unit($value) == 'px' {
+    @return math.div($value, 1px);
+  }
+
+  @error "fluid: #{$name} должен быть px или числом без единиц. Получено: #{$value}";
+}
+
 @function fluid($max: 100, $min: 10, $isEndOfLaptop: false) {
-  $maxViewportWidth: $container-desktop-width;
+  $max: to-px-number($max, '$max');
+  $min: to-px-number($min, '$min');
+
+  $maxViewportWidth: to-px-number($container-desktop-width, '$container-desktop-width');
+
   $minViewportWidth: 390;
 
   @if ($isEndOfLaptop) {
-    $minViewportWidth: $container-laptop-width;
+    $minViewportWidth: to-px-number($container-laptop-width, '$container-laptop-width');
+  }
+
+  @if $max <= $min {
+    @error "fluid: $max (#{$max}) должен быть больше, чем $min (#{$min})";
+  }
+
+  @if $maxViewportWidth <= $minViewportWidth {
+    @error "fluid: максимальная ширина вьюпорта (#{$maxViewportWidth}) должна быть больше минимальной (#{$minViewportWidth})";
   }
 
   $maxSize: math.div($max, 16);
@@ -14,8 +38,8 @@
   $maxWidth: math.div($maxViewportWidth, 16);
   $minWidth: math.div($minViewportWidth, 16);
 
-  $slope: math.div(($maxSize - $minSize), ($maxWidth - $minWidth));
-  $yAxisIntersections: -$minWidth * $slope + $minSize;
+  $slope: math.div($maxSize - $minSize, $maxWidth - $minWidth);
+  $yAxisIntersections: $minSize - $minWidth * $slope;
 
   @return clamp(
     #{$minSize * 1rem},
@@ -25,5 +49,5 @@
 }
 
 @function fluid-to-laptop($max: 100, $min: 10) {
-  @return fluid($max, $min, true)
+  @return fluid($max, $min, true);
 }
