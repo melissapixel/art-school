@@ -1,4 +1,5 @@
 @use "functions" as *;
+@use "variables" as *;
 
 * {
   margin: 0;
@@ -6,7 +7,17 @@
   box-sizing: border-box;
 }
 
+body {
+  font-family: 'Roboto', Arial, sans-serif;
+  font-size: fluid($size-base, $size-desc);
+  font-weight: 600;
+}
+a {
+  text-decoration: none;
+  color: $color-black;
+  font-size: $size-link;
+}
 .block {
-  padding-block: fluid(30, 10);
-  padding-inline: fluid(400, 20);
+  padding-block: fluid-to-laptop(10, 0);
+  padding-inline: fluid-to-laptop(400, 0);
 }
