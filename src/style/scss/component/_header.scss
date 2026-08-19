@@ -1,0 +1,74 @@
+@use "../functions" as *;
+@use "../variables" as *;
+@use "../mixins" as *;
+
+.header {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+
+  &_start {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: auto;
+
+    .start_soc {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 10px;      
+      img {
+        width: 80px;
+      }
+    }
+
+    .start_logo {
+      width: fluid-to-laptop(145, 100);
+    }
+    .start_address {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+
+      p:last-child  {
+        color: $color-yellow;
+      }
+    }
+    .start_button {
+      padding: 12.7px 30px;
+      background: $color-purple-dark;
+      border: none;
+      border-radius: 10px;
+      color: $color-white;
+      font-weight: 600;
+    }
+  }
+
+  &_and {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .header_setting {
+    display: none;
+  }
+
+  @include laptop-down {
+
+    .header_setting {
+      display: flex;
+      background: $color-purple-dark;
+      height: 50px;
+      justify-content: end;
+
+    }
+    .header_start {
+      display: none;
+    }
+    .header_and {
+      display: none;
+    }
+
+  }
+}
