@@ -11,6 +11,7 @@ body {
   font-family: 'Roboto', Arial, sans-serif;
   font-size: fluid($size-base, $size-desc);
   font-weight: 600;
+  line-height: 1.55;
 }
 a {
   text-decoration: none;
@@ -18,6 +19,13 @@ a {
   font-size: $size-link;
 }
 .block {
-  padding-block: fluid-to-laptop(10, 0);
-  padding-inline: fluid-to-laptop(400, 0);
+  padding-block: fluid(20, 0);
+  padding-inline: fluid-to-laptop(300, 0);
+}
+.block--content {
+  padding-block: fluid(100, 0);
+  padding-inline: fluid(300, 0);
+}
+.title {
+  font-size: fluid-to-laptop($size-main, $size-base);
 }
