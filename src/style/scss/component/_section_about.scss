@@ -1,0 +1,194 @@
+@use "../functions" as *;
+@use "../variables" as *;
+@use "../mixins" as *;
+
+.section__about {
+
+  .block--content {
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+  
+  .container__title {
+    text-align: center;
+
+    .title__pre {
+      font-size: $size-desc;
+      letter-spacing: 2.5px;
+      margin-bottom: 20px;
+    }
+    .title {
+      color: $color-purple-dark;
+      margin-bottom: 10px;
+    }
+    .title__post {
+      font-size: $size-desc;
+      font-weight: 300;
+    }
+
+    @include tablet-down {
+      // width: 80%;
+      margin: 0 auto;
+    }
+  }
+
+  .about__cards {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+
+    .card {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      border: 2px solid $color-purple-dark;
+      border-radius: 30px;
+      padding: 80px 30px;
+      width: 278px;
+      gap: 60px;
+
+      &__header {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        // justify-content: space-between;
+        gap: 10px;
+
+        img {
+          width: 100px;
+          height: 100px;
+        }
+        p {
+          text-align: center;
+          height: 155px;
+          font-size: $size-base;
+
+          span {
+            color: $color-purple-light;
+          }
+        }
+      }
+      &__and {
+        text-align: center;
+        font-size: 16px;
+        font-weight: 300;
+
+        min-height: 125px;
+      }
+    }
+}
+
+  .event__cards {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 20px;
+
+    .card-corp {
+      background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('/src/img/bg-card/corporate.jpg');
+    }
+    .card-dr {
+      background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('/src/img/bg-card/dr.jpg');
+    }
+    .card-date {
+      background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('/src/img/bg-card/date.jpg');
+    }
+    .card-bachelorette {
+      background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('/src/img/bg-card/bachelorette.jpg');
+    }
+    .card-children {
+      background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('/src/img/bg-card/children.jpg');
+    }
+    .card-master {
+      background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('/src/img/bg-card/master_class.jpg');
+    }
+
+    .card {
+      background-size: cover;
+      background-position: center;
+      border-radius: 10%;
+
+      height: 380px;
+      width: 380px;
+      padding: 20px;
+
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+
+      color: $color-white;
+
+      &__header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+      }
+    }
+  }
+}
+}
+
+
+@include desktop-down {
+  .section__about {
+    .block--content {
+        width: auto;
+        gap: 20px;
+        justify-content: center;
+
+        .event__cards {
+          display: flex;
+          flex-wrap: wrap;
+          justify-content: center;
+          gap: 20px;
+          .card {
+            width: 313px;
+            height: 313px;
+            // gap: 10px;
+          }
+        }
+
+        .about__cards {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+          .card {
+            width: 220px;
+            height: 600px;
+            padding: 40px 10px;
+            gap: 10px;
+          }
+        }
+    }
+  }
+}
+
+@include tablet-down {
+  .section__about .block--content {
+    width: 90%; // Контент занимает 90% экрана, центрирован
+    margin: 0 auto;
+
+    .about__cards, .event__cards {
+      gap: 20px; // Расстояние между элементами управляет сеткой
+    }
+
+    .about__cards {
+      .card {
+        width: 100%;
+        height: auto; 
+        padding: 20px 15px;
+        
+        &__header p {
+          height: auto; // Снимаем жесткие ограничения высоты текста
+        }
+      }
+    }
+    .event__cards {
+      .card {
+        width: 100%;
+        height: 400px; 
+        padding: 20px 15px;
+      }
+    }
+  }
+}
