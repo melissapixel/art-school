@@ -18,14 +18,21 @@ a {
   color: $color-black;
   font-size: $size-link;
 }
+span {
+  // font-size: 20px;
+  font-weight: 700;
+}
 .block {
   padding-block: fluid(20, 0);
   padding-inline: fluid-to-laptop(300, 0);
 }
 .block--content {
   padding-block: fluid(100, 0);
-  padding-inline: fluid(300, 0);
+  max-width: 1300px;
+  margin: 0 auto;
+  // padding-inline: fluid(300, 0);
 }
 .title {
   font-size: fluid-to-laptop($size-main, $size-base);
+  text-transform: uppercase;
 }

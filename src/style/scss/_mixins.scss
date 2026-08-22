@@ -5,19 +5,19 @@
 }
 
 @mixin tablet-down {
-  @media (max-width: 768px) {
+  @media (max-width: 980px) {
     @content;
   }
 }
 
 @mixin laptop-down {
-  @media (max-width: 840px) {
+  @media (max-width: 1050px) {
     @content;
   }
 }
 
 @mixin desktop-down {
-  @media (max-width: 1200px) {
+  @media (max-width: 1270px) {
     @content;
   }
 }
