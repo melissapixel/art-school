@@ -1,0 +1,37 @@
+@use "../functions" as *;
+@use "../variables" as *;
+@use "../mixins" as *;
+
+.section__question {
+  background: #f5f5f5;
+  .block--content {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    .title {
+      color: $color-purple-dark;
+    }
+    .content__question {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      font-size: $size-desc;
+      align-items: center;
+      text-align: start;
+
+      li {
+        list-style-position: inside;
+        background: $color-white;
+        padding: 20px 40px;
+        width: 760px;
+        border-radius: 20px;
+
+        @include tablet-down {
+          padding: 20px;
+          width: 100%;
+        }
+
+      }
+    }
+  }
+}
