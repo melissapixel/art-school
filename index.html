@@ -448,5 +448,42 @@
     </div>
   
   </section>
+
+  <section class="section_reservation">
+    <div class="block--content">
+      <div class="content">
+        <div class="container">
+          <h2 class="title">ЗАБРОНИРУЙТЕ ВРЕМЯ В 2 КЛИКА В АРТ-СТУДИИ!</h2>
+          <form action="#" method="">
+            <input type="text" id="username" name="username" placeholder="Как вас зовут?">
+
+            <input type="tel" id="phone" name="phone" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" placeholder="Телефон для связи">
+
+            <label for="direction">Что вас интересует?</label>
+              <select id="direction" name="direction" required>
+                <option value="" disabled selected>Выберите направление</option>
+                <optgroup label="Живопись и графика">
+                  <option value="sketching">Скетчинг</option>
+                  <option value="linogravure">Линогравюра</option>
+                  <option value="watercolor">Акварель</option>
+                </optgroup>
+                <optgroup label="Детские группы">
+                  <option value="kids">Детский мастер-класс (5-8 лет)</option>
+                </optgroup>
+              </select>
+
+            <button type="submit">ЗАПИСАТЬСЯ!</button>
+          </form>
+
+        </div>
+        <div class="container">
+          <div class="video">
+            <img src="src/img/zaglushka.jpg" alt="video">
+          </div>
+          <p>Один день из жизни АРТ студии №1 в СПб.</p>
+        </div>
+      </div>     
+    </div>
+  </section>
 </body>
 </html>
