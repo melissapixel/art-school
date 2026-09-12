@@ -1,0 +1,45 @@
+@use "../functions" as *;
+@use "../variables" as *;
+@use "../mixins" as *;
+
+
+.section__review {
+  .block--content {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    .title {
+      color: $color-purple-light;
+    }
+    .content {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+
+      .content__platforms {
+        display: flex;
+        flex-direction: row;
+        height: auto;
+
+        p {
+          text-align: left;
+        }
+        
+        .platforms-list {
+          display: flex;
+          flex-direction: row;
+          justify-content: space-between;
+
+          width: 70%;
+          img {
+            width: 120px;
+          }
+        }
+      }
+      .text {
+        font-weight: normal;
+        line-height: 31px;
+      }
+    }
+  }
+}
