@@ -40,3 +40,18 @@ span {
   font-size: fluid-to-laptop($size-main, $size-base);
   text-transform: uppercase;
 }
+
+button {
+  padding: 15px 30px;
+  font-weight: 600;
+  border-radius: 8px;
+
+  &.button--purple {
+    color: $color-white;
+    background-color: $color-purple-light;
+    border: none;
+  }
+  &.button--white {
+    background-color: $color-white;
+  }
+}
