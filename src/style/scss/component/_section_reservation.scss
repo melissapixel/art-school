@@ -6,51 +6,10 @@
 .section_reservation {
   .block--content {
     .content {
-      display: flex;
-      flex-direction: row;
-      flex-wrap: wrap;
-      // justify-content:space-between;
-
       .container {
-        display: flex;
-        width: 50%;
-        flex-direction: column;
-
         .title {
           color: $color-purple-dark;
         }
-
-        form {
-          display: flex;
-          flex-direction: column;
-          gap: 20px;
-          padding: 10px;
-          font-size: $size-desc;
-
-          input, select {
-            background: none;
-            border: none;
-            border-bottom: 1px solid #b3b3b3;
-            font-size: $size-desc;
-            padding: 20px 0px;
-          }
-          label {
-            font-weight: 300;
-            text-align: left;
-          }
-          button {
-            width: auto;
-            text-align: center;
-            align-self: center;
-            font-weight: 600;
-            border-radius: 15px;
-            color: $color-white;
-            background-color: $color-purple-light;
-            border: none;
-            padding: 15px 30px;
-          }
-        }
-        
         .video {
           img {
             max-height: 400px;
