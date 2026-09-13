@@ -1,0 +1,96 @@
+@use "../functions" as *;
+@use "../variables" as *;
+@use "../mixins" as *;
+
+
+.section__statistics {
+  background: #f1f2f3;
+  .block--content {
+    .title {
+      color: $color-purple-light;
+      text-transform: uppercase;
+      font-weight: 600;
+    }
+
+  .list__card {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+    justify-content: center;
+
+    .card {
+      height: 200px;
+      width: 277px;
+      background: #24b983;
+      padding: 20px;
+      border-radius: 20px;
+      color: $color-white;
+
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      align-items: start;
+      text-align: left;
+
+      .num {
+        line-height: 40px;
+        font-size: $size-title;
+        font-weight: 600;
+      }
+      .desc {
+        font-weight: 700;
+        line-height: 20px;
+        font-size: $size-desc;
+      }
+
+      &_grin {
+        background: #C6DF90;
+      }
+      &_blue {
+        background: #AFDAFC;
+      }
+      &_purple {
+        background: #D8BFD8;
+      }
+      &_orange {
+        background: #FAD6A5;
+      }
+      &_yellow {
+        background: #EEE6A3;
+      }
+      &_grey {
+        background: #DCDCDC;
+      }
+    }
+    .card.card--none {
+      visibility: hidden;
+    }
+  }
+  }
+}
+
+@include desktop-down {
+  .section__statistics {
+    .block--content {
+      width: 90%;
+      .list__card {
+        gap: 15px;
+        .card.card--none {
+          display: none;
+        }
+      }
+    }
+  }
+}
+
+@include mobile-down {
+  .section__statistics {
+    .block--content {
+      .list__card {
+        .card {
+          width: 90%;
+        }
+      }
+    }
+  }
+}
