@@ -565,5 +565,44 @@
       <button class="button--purple">КУПИТЬ СЕРТИФИКАТ</button>
     </div>
   </section>
+
+  <section class="section__sign">
+      <div class="content">
+        <div class="container">
+          <img src="src/img/bg/imagecopy.png" alt="card">
+        </div>
+
+        <div class="container block--content">
+          <h2 class="title">Запишитесь к нам в 2 клика <br>на арт мастер-класс</h2>
+          <p class="post-title">Если вы не знаете точное количество людей, дату или время, укажите приблизительные данные.</p>
+
+          <form action="#" method="">
+            <input type="text" id="username" name="username" placeholder="Как вас зовут?">
+
+            <input type="tel" id="phone" name="phone" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" placeholder="Телефон для связи">
+
+            <label for="direction">Что вас интересует?</label>
+              <select id="direction" name="direction" required>
+                <option value="" disabled selected>Выберите направление</option>
+                <optgroup label="Живопись и графика">
+                  <option value="sketching">Скетчинг</option>
+                  <option value="linogravure">Линогравюра</option>
+                  <option value="watercolor">Акварель</option>
+                </optgroup>
+                <optgroup label="Детские группы">
+                  <option value="kids">Детский мастер-класс (5-8 лет)</option>
+                </optgroup>
+              </select>
+
+            <label for="comment">Ваш комментарий/вопрос по поводу заказа </label>
+            <input type="text" id="comment" name="comment" placeholder="Не обязательно для заполнения">
+
+            <p class="desc">Отправляя заявку, Вы не записываетесь автоматически. Дождитесь связи с нашим менеджером для подтверждения!</p>
+
+            <button type="submit">ОТПРАВИТЬ!</button>
+          </form>
+        </div>
+      </div>
+  </section>
 </body>
 </html>

@@ -1,0 +1,65 @@
+@use "../functions" as *;
+@use "../variables" as *;
+@use "../mixins" as *;
+
+
+.section__sign {
+    .content {
+      .container {
+        justify-content: center;
+        img {
+          border-radius: 40px;
+        }
+      }
+      .container.block--content {
+        padding: 80px 100px;
+
+        .title {
+          color: $color-purple-light;
+          font-weight: 600;
+          line-height: 1.23;
+        }
+        .post-title {
+          color: $color-black;
+          font-weight: 300;
+          font-size: $size-little;
+          text-align: left;
+          padding: 20px 0px;
+        }
+
+        form {
+          p.desc {
+            text-align: left;
+            font-weight: 700;
+          }
+          button {
+            padding: 20px 40px;
+            border-radius: 10px;
+          }
+        }
+      }
+    }
+}
+
+@include desktop-down {
+  .section__sign {
+    .content {
+      .container.block--content {
+        padding: 80px 30px;
+      }
+    }
+  }
+}
+
+
+@include tablet-down {
+  .section__sign {
+      .content {
+        flex-direction: column;
+        gap: 20px;
+        .container {
+          width: 100%;
+        }
+      }
+    }
+  }
