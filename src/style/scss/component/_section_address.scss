@@ -1,0 +1,51 @@
+@use "../functions" as *;
+@use "../variables" as *;
+@use "../mixins" as *;
+
+
+.section__address {
+  .address {
+    position: absolute;
+    left: 60px;
+    margin-top: 100px;
+
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    align-items: center;
+
+    background: #d8c8f0;
+    padding: 50px 60px;
+    border-radius: 30px;
+    text-align: center;
+
+    .address__title {
+      font-weight: 700;
+      line-height: 1.55;
+    }
+    .address__name {
+      color: rgb(255, 168, 0);
+      font-weight: 700;
+      line-height: 1.55;
+      font-size: 24px;
+    }
+    .address__address {
+      font-size: 24px;
+      font-weight: 300;
+    }
+  }
+}
+
+
+@include tablet-down {
+  .section__address {
+    .address {
+      position: static;
+      border-radius: 0px;
+      margin: 0px;
+    }
+    iframe {
+      height: 350px;
+    }
+  }
+}
