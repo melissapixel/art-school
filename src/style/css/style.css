@@ -156,7 +156,7 @@ form button {
 }
 
 .main {
-  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("/src/img/bg/modern-art-studio-co.jpg");
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../../img/bg/modern-art-studio-co.jpg");
   background-size: cover;
   background-position: center;
 }
@@ -283,22 +283,22 @@ form button {
   gap: 20px;
 }
 .section__about .block--content .event__cards .card-corp {
-  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("/src/img/bg-card/corporate.jpg");
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../../img/bg-card/corporate.jpg");
 }
 .section__about .block--content .event__cards .card-dr {
-  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("/src/img/bg-card/dr.jpg");
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../../img/bg-card/dr.jpg");
 }
 .section__about .block--content .event__cards .card-date {
-  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("/src/img/bg-card/date.jpg");
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../../img/bg-card/date.jpg");
 }
 .section__about .block--content .event__cards .card-bachelorette {
-  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("/src/img/bg-card/bachelorette.jpg");
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../../img/bg-card/bachelorette.jpg");
 }
 .section__about .block--content .event__cards .card-children {
-  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("/src/img/bg-card/children.jpg");
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../../img/bg-card/children.jpg");
 }
 .section__about .block--content .event__cards .card-master {
-  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("/src/img/bg-card/master_class.jpg");
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../../img/bg-card/master_class.jpg");
 }
 .section__about .block--content .event__cards .card {
   background-size: cover;
@@ -351,7 +351,8 @@ form button {
     width: 90%;
     margin: 0 auto;
   }
-  .section__about .block--content .about__cards, .section__about .block--content .event__cards {
+  .section__about .block--content .about__cards,
+  .section__about .block--content .event__cards {
     gap: 20px;
   }
   .section__about .block--content .about__cards .card {
@@ -411,22 +412,22 @@ form button {
   width: 60px;
 }
 .section__master .block--content .container__card .card__img.masterclass-painting {
-  background-image: url("/src/img/bg-card/Masterclass_Painting.webp");
+  background-image: url("../../img/bg-card/Masterclass_Painting.webp");
 }
 .section__master .block--content .container__card .card__img.zhivopis-potal {
-  background-image: url("/src/img/bg-card/zhivopis-potal.webp");
+  background-image: url("../../img/bg-card/zhivopis-potal.webp");
 }
 .section__master .block--content .container__card .card__img.flyuid-art {
-  background-image: url("/src/img/bg-card/flyuid-art.jpg");
+  background-image: url("../../img/bg-card/flyuid-art.jpg");
 }
 .section__master .block--content .container__card .card__img.flyuid-art-rospis-mishki-bearbrick {
-  background-image: url("/src/img/bg-card/flyuid-art-rospis-mishki-bearbrick.jpg");
+  background-image: url("../../img/bg-card/flyuid-art-rospis-mishki-bearbrick.jpg");
 }
 .section__master .block--content .container__card .card__img.sketching {
-  background-image: url("/src/img/bg-card/sketching.webp");
+  background-image: url("../../img/bg-card/sketching.webp");
 }
 .section__master .block--content .container__card .card__img.linogravyura {
-  background-image: url("/src/img/bg-card/linogravyura.webp");
+  background-image: url("../../img/bg-card/linogravyura.webp");
 }
 .section__master .block--content .container__card .card__content {
   display: flex;
@@ -661,7 +662,7 @@ form button {
   }
 }
 .section__certificate {
-  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("/src/img/bg/image.png");
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../../img/bg/image.png");
   background-size: cover;
   background-position: center;
 }

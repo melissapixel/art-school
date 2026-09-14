@@ -5,7 +5,7 @@
 .section__master {
   background: #fafafa;
 
-  .block--content{
+  .block--content {
     .title {
       color: $color-purple-dark;
     }
@@ -50,23 +50,29 @@
             height: 60px;
             width: 60px;
           }
+
           &.masterclass-painting {
-            background-image: url('/src/img/bg-card/Masterclass_Painting.webp');
+            background-image: url('../../img/bg-card/Masterclass_Painting.webp');
           }
+
           &.zhivopis-potal {
-            background-image: url('/src/img/bg-card/zhivopis-potal.webp');
+            background-image: url('../../img/bg-card/zhivopis-potal.webp');
           }
+
           &.flyuid-art {
-            background-image: url('/src/img/bg-card/flyuid-art.jpg');
+            background-image: url('../../img/bg-card/flyuid-art.jpg');
           }
+
           &.flyuid-art-rospis-mishki-bearbrick {
-            background-image: url('/src/img/bg-card/flyuid-art-rospis-mishki-bearbrick.jpg');
+            background-image: url('../../img/bg-card/flyuid-art-rospis-mishki-bearbrick.jpg');
           }
+
           &.sketching {
-            background-image: url('/src/img/bg-card/sketching.webp');   
+            background-image: url('../../img/bg-card/sketching.webp');
           }
+
           &.linogravyura {
-            background-image: url('/src/img/bg-card/linogravyura.webp');    
+            background-image: url('../../img/bg-card/linogravyura.webp');
           }
         }
 
@@ -89,22 +95,27 @@
           .content__text {
             font-weight: 300;
           }
+
           .content__about {
             .about__quetion {
               font-weight: 700;
             }
+
             .about__answare {
               font-weight: 300;
             }
           }
+
           .content__list {
             font-size: $size-desc;
             font-weight: 300;
           }
+
           span {
             font-size: 30px;
           }
         }
+
         &__button {
           padding: 20px;
 
@@ -118,6 +129,7 @@
               background-color: $color-purple-light;
               border: none;
             }
+
             &.button--white {
               background-color: $color-white;
             }
@@ -130,17 +142,21 @@
 }
 
 @include desktop-down {
-  .section__master  {
+  .section__master {
     .block--content {
       width: 90%;
+
       .container__card {
+
         // justify-content: space-between;
-        .card  {
+        .card {
           max-width: 400px;
+
           &__img {
             min-height: 300px;
           }
-          &__button  {
+
+          &__button {
             display: flex;
             justify-content: space-between;
           }
@@ -149,20 +165,26 @@
     }
   }
 }
+
 @include laptop-down {
-  .section__master  {
+  .section__master {
     .block--content {
       width: 90%;
+
       .container__card {
+
         // justify-content: space-between;
-        .card  {
+        .card {
           max-width: 300px;
+
           &__img {
             min-height: 200px;
             padding: 10px;
           }
+
           &__button {
             padding: 10px;
+
             button {
               padding: 10px 10px;
             }
@@ -172,11 +194,13 @@
     }
   }
 }
+
 @include tablet-down {
   .section__master {
     .block--content {
       width: 90%;
       margin: 0 auto;
+
       .container__card {
         .card {
           max-width: 45%;

@@ -4,16 +4,17 @@
 
 
 .section__certificate {
-  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('/src/img/bg/image.png');
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('../../img/bg/image.png');
   background-size: cover;
   background-position: center;
 
   .block--content {
     .title {
       color: $color-purple-light1;
-      
+
       &::first-line {
-        color: rgb(236, 229, 247);;
+        color: rgb(236, 229, 247);
+        ;
       }
     }
 
@@ -39,6 +40,7 @@
             height: 80px;
             border-radius: 50%;
           }
+
           .header__text {
             display: flex;
             flex-direction: column;
@@ -91,6 +93,7 @@
     .block--content {
       .certificate_list {
         flex-direction: column;
+
         .point {
           max-width: 100%;
         }
