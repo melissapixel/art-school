@@ -1,0 +1,46 @@
+@use "../functions" as *;
+@use "../variables" as *;
+@use "../mixins" as *;
+
+
+.footer {
+  background: #af9bce;
+
+  .block--content {
+    padding-top: 20px;
+    padding-bottom: 30px;
+
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+
+    .container {
+      color: $color-white;
+      font-weight: 400;
+      font-size: 14px;
+      align-self: start;
+      text-align: left;
+    }
+    .container.icon {
+      text-align: right;
+      align-self: center;
+
+
+      img {
+        width: 60px;
+      }
+    }
+  }
+}
+
+
+@include mobile-down {
+  .footer {
+    .block--content {
+      flex-direction: column;
+      .container.icon {
+        align-self: start;
+      }
+    }
+  }
+}
