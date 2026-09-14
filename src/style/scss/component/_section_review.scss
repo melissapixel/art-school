@@ -23,11 +23,13 @@
 
         p {
           text-align: left;
+          align-self: center;
         }
         
         .platforms-list {
           display: flex;
           flex-direction: row;
+          flex-wrap: wrap;
           justify-content: space-between;
 
           width: 70%;
@@ -39,6 +41,34 @@
       .text {
         font-weight: normal;
         line-height: 31px;
+        text-align: left;
+      }
+    }
+  }
+}
+
+
+@include tablet-down {
+  .section__review {
+    .block--content {
+      .content {
+        display: flex;
+        flex-direction: column;
+
+        .content__platforms {
+          flex-direction: column;
+          p {
+            text-align: center;
+          }
+          .platforms-list {
+            width: 100%;
+            padding: 20px 0px;
+            img {
+              width: 90px;
+            }
+          }
+
+        }
       }
     }
   }
